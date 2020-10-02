@@ -218,7 +218,7 @@ public class Util {
             }
         }
         if (ConfigManager.getInstance().getHandleOfflineFactions()) {
-            if (FactionsIntegration.get().isFactionOffline(location)) {
+            if (FactionsIntegration.get().isFactionNormal(location) && FactionsIntegration.get().getOfflinePercent(location) >= ConfigManager.getInstance().getHandleOfflinePercentFactions()) {
                 if (ConfigManager.getInstance().getProtectOfflineFactions()) {
                     return 0;
                 }
@@ -226,7 +226,7 @@ public class Util {
             }
         }
         if (ConfigManager.getInstance().getHandleOnlineFactions()) {
-            if (!FactionsIntegration.get().isFactionOffline(location)) {
+            if (!FactionsIntegration.get().isFactionNormal(location) && FactionsIntegration.get().getOfflinePercent(location) >= ConfigManager.getInstance().getHandleOfflinePercentFactions()) {
                 value = ConfigManager.getInstance().getOnlineFactionsDurabilityMultiplier();
             }
         }

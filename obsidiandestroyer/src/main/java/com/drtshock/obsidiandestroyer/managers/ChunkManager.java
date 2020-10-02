@@ -494,7 +494,7 @@ public class ChunkManager {
 
             // Factions bypasses
             if (factionsApplied && !blockedBlockLocations.contains(block.getLocation())) {
-                if (FactionsIntegration.get().isFactionOffline(block.getLocation())) {
+                if (FactionsIntegration.get().isFactionNormal(block.getLocation()) && FactionsIntegration.get().getOfflinePercent(block.getLocation()) >= ConfigManager.getInstance().getHandleOfflinePercentFactions()) {
                     // Add block to bypass list to override
                     bypassBlockList.add(block);
                 }
@@ -916,7 +916,7 @@ public class ChunkManager {
             }
             // Factions bypasses
             if (useFactions && applyFactions) {
-                if (FactionsIntegration.get().isFactionOffline(block.getLocation())) {
+                if (FactionsIntegration.get().isFactionNormal(block.getLocation()) && FactionsIntegration.get().getOfflinePercent(block.getLocation()) >= ConfigManager.getInstance().getHandleOfflinePercentFactions()) {
                     bypassBlockList.add(block);
                 }
             }
