@@ -102,7 +102,7 @@ HandledMaterials:
       EnderCrystal: false
     Damage:
       EnderCrystal: 2
-  ENCHANTING_TABLE:
+  ENCHANTMENT_TABLE:
     BlastRadius: 3
     Durability:
       Amount: 6
@@ -156,7 +156,7 @@ HandledMaterials:
       EnderCrystal: false
     Damage:
       EnderCrystal: 2
-  NETHER_PORTAL:
+  PORTAL:
     BlastRadius: 3
     HandleNonSolid: true
     Durability:
@@ -175,7 +175,7 @@ HandledMaterials:
       EnderCrystal: false
     Damage:
       EnderCrystal: 2
-  END_PORTAL:
+  ENDER_PORTAL:
     BlastRadius: 3
     HandleNonSolid: true
     Durability:
@@ -194,7 +194,7 @@ HandledMaterials:
       EnderCrystal: false
     Damage:
       EnderCrystal: 2
-  END_PORTAL_FRAME:
+  ENDER_PORTAL_FRAME:
     BlastRadius: 3
     Durability:
       Amount: 20
@@ -247,96 +247,6 @@ HandledMaterials:
       Cannons: true
       Withers: true
       Minecarts: true
-  MOSSY_COBBLESTONE:
-    BlastRadius: 2
-    Durability:
-      Amount: 3
-      Enabled: false
-      ChanceToDrop: 0.5
-      ResetEnabled: true
-      ResetAfter: 300000
-    EnabledFor:
-      TNT: true
-      Creepers: true
-      Ghasts: true
-      Cannons: true
-      Withers: true
-      Minecarts: true
-  END_STONE_BRICKS:
-    BlastRadius: 3
-    Durability:
-      Amount: 4
-      Enabled: false
-      ChanceToDrop: 0.7
-      ResetEnabled: true
-      ResetAfter: 1800000
-    EnabledFor:
-      TNT: true
-      Creepers: true
-      Ghasts: false
-      Cannons: true
-      Withers: false
-      Minecarts: false
-  SMOOTH_STONE:
-    BlastRadius: 3
-    Durability:
-      Amount: 4
-      Enabled: false
-      ChanceToDrop: 0.7
-      ResetEnabled: true
-      ResetAfter: 1800000
-    EnabledFor:
-      TNT: true
-      Creepers: true
-      Ghasts: false
-      Cannons: true
-      Withers: false
-      Minecarts: false
-  STONE_BRICK_STAIRS:
-    BlastRadius: 3
-    Durability:
-      Amount: 4
-      Enabled: false
-      ChanceToDrop: 0.7
-      ResetEnabled: true
-      ResetAfter: 1800000
-    EnabledFor:
-      TNT: true
-      Creepers: true
-      Ghasts: false
-      Cannons: true
-      Withers: false
-      Minecarts: false
-  STONE_BRICK:
-    BlastRadius: 3
-    Durability:
-      Amount: 4
-      Enabled: false
-      ChanceToDrop: 0.7
-      ResetEnabled: true
-      ResetAfter: 1800000
-    EnabledFor:
-      TNT: true
-      Creepers: true
-      Ghasts: false
-      Cannons: true
-      Withers: false
-      Minecarts: false
-  STONE_BRICK_SLAB:
-    BlastRadius: 3
-    Durability:
-      Amount: 4
-      Enabled: false
-      ChanceToDrop: 0.7
-      ResetEnabled: true
-      ResetAfter: 1800000
-    EnabledFor:
-      TNT: true
-      Creepers: true
-      Ghasts: false
-      Cannons: true
-      Withers: false
-      Minecarts: false
   NETHER_BRICK:
     BlastRadius: 3
     HandleNonSolid: true
@@ -548,7 +458,22 @@ HandledMaterials:
       Cannons: true
       Withers: true
       Minecarts: false
-  REDSTONE_LAMP:
+  REDSTONE_LAMP_ON:
+    BlastRadius: 3
+    Durability:
+      Amount: 3
+      Enabled: false
+      ChanceToDrop: 0.3
+      ResetEnabled: true
+      ResetAfter: 900000
+    EnabledFor:
+      TNT: true
+      Creepers: true
+      Ghasts: false
+      Cannons: true
+      Withers: true
+      Minecarts: false
+  REDSTONE_LAMP_OFF:
     BlastRadius: 3
     Durability:
       Amount: 3
@@ -569,21 +494,6 @@ HandledMaterials:
       Amount: 1
       Enabled: false
       ChanceToDrop: 0.28
-      ResetEnabled: false
-      ResetAfter: 300000
-    EnabledFor:
-      TNT: true
-      Creepers: true
-      Ghasts: true
-      Cannons: true
-      Withers: false
-      Minecarts: false
-  GRASS_BLOCK:
-    BlastRadius: 4
-    Durability:
-      Amount: 1
-      Enabled: false
-      ChanceToDrop: 0.22
       ResetEnabled: false
       ResetAfter: 300000
     EnabledFor:
@@ -667,89 +577,6 @@ HandledMaterials:
       TNT: true
       Creepers: true
       Ghasts: false
-      Cannons: true
-      Withers: true
-      Minecarts: true
-  # Skull
-  SKELETON_SKULL:
-    BlastRadius: 3
-    HandleNonSolid: true
-    Durability:
-      Amount: 2
-      Enabled: true
-      ChanceToDrop: 0.0
-      ResetEnabled: false
-      ResetAfter: 300000
-    EnabledFor:
-      TNT: true
-      Creepers: true
-      Ghasts: false
-      Cannons: true
-      Withers: true
-      Minecarts: true
-  # Stone Slab
-  STONE_SLAB:
-    BlastRadius: 3
-    BypassFluidProtection: true
-    Durability:
-      Amount: 2
-      Enabled: false
-      ChanceToDrop: 0.20
-      ResetEnabled: false
-      ResetAfter: 300000
-    EnabledFor:
-      TNT: true
-      Creepers: true
-      Ghasts: true
-      Cannons: true
-      Withers: true
-      Minecarts: true
-  # Smooth Stone Slab
-  SMOOTH_STONE_SLAB:
-    BlastRadius: 3
-    BypassFluidProtection: true
-    Durability:
-      Amount: 3
-      Enabled: false
-      ChanceToDrop: 0.20
-      ResetEnabled: false
-      ResetAfter: 300000
-    EnabledFor:
-      TNT: true
-      Creepers: true
-      Ghasts: true
-      Cannons: true
-      Withers: true
-      Minecarts: true
-  # Oak
-  OAK_LOG:
-    BlastRadius: 3
-    Durability:
-      Amount: 2
-      Enabled: false
-      ChanceToDrop: 0.20
-      ResetEnabled: false
-      ResetAfter: 300000
-    EnabledFor:
-      TNT: true
-      Creepers: true
-      Ghasts: true
-      Cannons: true
-      Withers: true
-      Minecarts: true
-  # Spruce
-  SPRUCE_LOG:
-    BlastRadius: 3
-    Durability:
-      Amount: 2
-      Enabled: false
-      ChanceToDrop: 0.20
-      ResetEnabled: false
-      ResetAfter: 300000
-    EnabledFor:
-      TNT: true
-      Creepers: true
-      Ghasts: true
       Cannons: true
       Withers: true
       Minecarts: true
