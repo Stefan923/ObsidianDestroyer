@@ -95,7 +95,9 @@ Factions:
 
   # Toggle to manage an offline faction. (Override & Multiplier)
   # Enables an override that will allow [managed] blocks to be destroyed for a protected offline faction.
-  HandleOffline: false
+  HandleOffline:
+    Enabled: false
+    OfflinePercent: 30
   # Protect factions that offline instead of applying damage
   ProtectOffline: false
   # Multiplier to use for changing the durability of an offline faction.

@@ -321,7 +321,11 @@ public class ConfigManager {
     }
 
     public boolean getHandleOfflineFactions() {
-        return config.getBoolean("Factions.HandleOffline", false);
+        return config.getBoolean("Factions.HandleOffline.Enabled", false);
+    }
+
+    public double getHandleOfflinePercentFactions() {
+        return config.getDouble("Factions.HandleOffline.OfflinePercent", 30.0d);
     }
 
     public boolean getProtectOfflineFactions() {
