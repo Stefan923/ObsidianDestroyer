@@ -6,7 +6,9 @@ public interface FactionsHook {
 
     public String getVersion();
 
-    public boolean isFactionOffline(Location loc);
+    public boolean isFactionNormal(Location loc);
+
+    public double getOfflinePercent(Location loc);
 
     public boolean isExplosionsEnabled(Location loc);
 

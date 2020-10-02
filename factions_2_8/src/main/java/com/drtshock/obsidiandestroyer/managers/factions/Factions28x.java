@@ -10,16 +10,28 @@ import org.bukkit.Location;
 public class Factions28x implements FactionsHook {
 
     @Override
-    public boolean isFactionOffline(Location loc) {
+    public boolean isFactionNormal(Location loc) {
         Faction faction = BoardColl.get().getFactionAt(PS.valueOf(loc));
         if ((faction.isNone()) ||
                 ChatColor.stripColor(faction.getName()).equalsIgnoreCase("safezone") ||
                 ChatColor.stripColor(faction.getName()).equalsIgnoreCase("warzone")) {
-            //ObsidianDestroyer.debug("Factions25x.isFactionOffline: false");
+            //ObsidianDestroyer.debug("Factions25x.isFactionNormal: false");
             return false;
         }
-        //ObsidianDestroyer.debug("Factions25x.isFactionOffline: " + faction.isFactionConsideredOffline());
-        return faction.isFactionConsideredOffline() && faction.getFlag(MFlag.ID_OFFLINEEXPLOSIONS);
+        //ObsidianDestroyer.debug("Factions25x.isFactionNormal: " + faction.isFactionConsideredOffline());
+        return faction.getFlag(MFlag.ID_OFFLINEEXPLOSIONS);
+    }
+
+    @Override
+    public double getOfflinePercent(Location loc) {
+        Faction faction = BoardColl.get().getFactionAt(PS.valueOf(loc));
+
+        int online = faction.getOnlinePlayers().size();
+        int total = faction.getMPlayers().size();
+        double percent = (online * 100.0d) / total;
+
+        //ObsidianDestroyer.debug("Factions25x.getOfflinePercent: " + 100 - percent);
+        return 100 - percent;
     }
 
     @Override

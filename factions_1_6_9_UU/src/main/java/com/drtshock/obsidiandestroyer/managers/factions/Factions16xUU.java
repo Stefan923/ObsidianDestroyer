@@ -8,14 +8,26 @@ import org.bukkit.Location;
 public class Factions16xUU implements FactionsHook {
 
     @Override
-    public boolean isFactionOffline(Location loc) {
+    public boolean isFactionNormal(Location loc) {
         Faction faction = Board.getInstance().getFactionAt(new FLocation(loc));
         if (!faction.isNormal()) { // Checks if faction isn't safezone, warzone, or wilderness.
-            //ObsidianDestroyer.debug("Factions16x.isFactionOffline: false");
+            //ObsidianDestroyer.debug("Factions16x.isFactionNormal: false");
             return false;
         }
-        //ObsidianDestroyer.debug("Factions16x.isFactionOffline: " + (faction.getOnlinePlayers().size() == 0));
-        return faction.getOnlinePlayers().size() == 0;
+        //ObsidianDestroyer.debug("Factions16x.isFactionNormal: true");
+        return true;
+    }
+
+    @Override
+    public double getOfflinePercent(Location loc) {
+        Faction faction = Board.getInstance().getFactionAt(new FLocation(loc));
+
+        int online = faction.getOnlinePlayers().size();
+        int total = faction.getFPlayers().size();
+        double percent = (online * 100.0d) / total;
+
+        //ObsidianDestroyer.debug("Factions16x.getOfflinePercent: " + 100 - percent);
+        return 100 - percent;
     }
 
     @Override
