@@ -1,6 +1,7 @@
 package com.drtshock.obsidiandestroyer.listeners;
 
 import com.drtshock.obsidiandestroyer.managers.ChunkManager;
+import org.bukkit.Bukkit;
 import org.bukkit.entity.Entity;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -21,9 +22,9 @@ public class EntityExplodeListener implements Listener {
         if (event.getLocation().getBlock().hasMetadata("ObbyEntity")) {
             return;
         }
-        if (event.getYield() <= 0.51) {
-            return;
-        }
+//        if (event.getYield() <= 0.51) {
+//            return;
+//        }
 
         ChunkManager.getInstance().handleExplosion(event);
     }
