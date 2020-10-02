@@ -34,7 +34,7 @@ public class FactionsManager {
                             if (version.contains("U")) {
                                 three = ver[0] + "." + ver[1] + ".U";
                             }
-                            if (three.equalsIgnoreCase(fac) || (two.equalsIgnoreCase(fac) && !version.contains("U")) || ver[0].equalsIgnoreCase(fac)) {
+                            if (three.equalsIgnoreCase(fac) || (two.equalsIgnoreCase(fac) && !version.contains("U")) || ver[0].equalsIgnoreCase(fac) || version.equalsIgnoreCase(fac)) {
                                 try {
                                     Object o = clazz.newInstance();
                                     if (o instanceof FactionsHook) {

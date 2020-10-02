@@ -4,3 +4,4 @@
 # <built-in hook> <factions version>
 com.drtshock.obsidiandestroyer.managers.factions.Factions16xUU 1.6.U
 com.drtshock.obsidiandestroyer.managers.factions.Factions28x 2.8
+com.drtshock.obsidiandestroyer.managers.factions.Factions16xUU 1.6.9.5-2.4.8-STABLE
